@@ -1,5 +1,4 @@
 /************************************************************Estilos generales********************************************************************/
-
 * {
     font-family: "Poppins", serif;
     box-sizing: border-box;
@@ -17,7 +16,7 @@ ul,
 li {
     margin: 0;
     padding: 0;
-    color: black;
+    color: #000000;
     text-decoration: none;
 }
 
@@ -78,14 +77,14 @@ input {
     padding: 15px;
     transition: background-color 0.3s ease, color 0.3s ease;
     text-decoration: none;
-    color: black;
+    color: #000000;
     border-radius: 5px;
 }
 
 .contenedorDerecho a:hover {
-    background-color: gray;
+    background-color: #808080;
     opacity: 80%;
-    color: white;
+    color: #ffffff;
 }
 
 .contenedorDerecho li {
@@ -118,12 +117,12 @@ input {
 }
 
 .contenedorIzquierdo div:hover {
-    background-color: gray;
+    background-color: #808080;
     opacity: 80%;
 }
 
 .contenedorIzquierdo div:hover i {
-    color: white;
+    color: #ffffff;
 }
 
 .buscar {
@@ -141,13 +140,13 @@ input {
 }
 
 .buscar:hover {
-    background-color: gray;
-    color: white;
+    background-color: #808080;
+    color: #ffffff;
     opacity: 80%;
 }
 
 .buscar:hover input {
-    color: white;
+    color: #ffffff;
 }
 
 
@@ -253,13 +252,11 @@ input {
     text-align: center;
     width: 100%;
     height: auto;
-    border-radius: 10px;
-    height: auto;
 }
 
 .cardProductos img {
-    width: 100%;
-    height: 100%;
+    max-width: 100%;
+    height: auto;
     object-fit: cover;
     border-radius: 10px;
 }
@@ -271,8 +268,8 @@ input {
     margin-top: 10px;
 }
 
-  /*Nombre de la prenda*/
-.infoProductos h6 {
+/*Nombre de la prenda*/
+.infoProductos h5 {
     font-size: 24px;
 }
 
@@ -310,10 +307,10 @@ input {
 /**Filtros**/
 .dropdown-menu {
     width: 300px;
-    background-color: white;
+    background-color: #ffffff;
     padding: 20px;
     border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 10px #0000001a;
 }
 
 .botonFiltros {
@@ -361,11 +358,11 @@ input {
     margin: 0;
 }
 
-.toggle:checked + .tituloFiltros + .categoriasFiltros {
+.toggle:checked+.tituloFiltros+.categoriasFiltros {
     display: block;
 }
 
-.toggle:checked + .tituloFiltros .icono {
+.toggle:checked+.tituloFiltros .icono {
     transform: rotate(45deg);
 }
 
@@ -383,7 +380,7 @@ input {
 }
 
 .categoriasFiltros li:hover {
-    color: gray;
+    color: #808080;
     opacity: 80%;
 }
 
@@ -398,7 +395,7 @@ input {
 }
 
 .contenedorTexto {
-    background-color: gray;
+    background-color: #808080;
     padding: 10px;
     height: 100%;
     display: flex;
@@ -427,21 +424,20 @@ input {
     object-fit: cover;
 }
 
-.contenedorImgPromo button {
+.agregarCarrito {
     border: none;
     text-decoration: none;
-    background-color: gray;
+    background-color: #808080;
     opacity: 80%;
     position: absolute;
     bottom: 10px;
     left: 50%;
     transform: translateX(-50%);
-    color: white;
+    color: #ffffff;
     font-size: 14px;
     padding: 5px;
     border-radius: 5px;
 }
-
 
 /**Numeracion Paginas**/
 .pagesNum {
@@ -459,22 +455,184 @@ input {
 
 .pagination a,
 .pagination span {
-    color: black !important;
+    color: #000000 !important;
     padding: 8px 12px;
     text-decoration: none;
     margin: 0 4px;
 }
 
 .pagination a:hover {
-    background-color: gray;
-    color: white !important;
+    background-color: #808080;
+    color: #ffffff !important;
+}
+
+
+/**Muestrario Productos**/
+.contenedorGridProductos {
+    display: grid;
+    grid-template-columns: 180px 1fr 1fr;
+    gap: 20px;
+    padding: 20px;
+    align-items: start;
+}
+
+.slideFotos {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+}
+
+.slideFotos img {
+    width: 150px;
+    height: auto;
+    cursor: pointer;
+    margin-left: 20px;
+}
+
+.imagenProducto {
+    width: 620px;
+    height: auto;
+    align-self: center;
+}
+
+.contenedorInfo {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    text-align: left;
+}
+
+.info {
+    text-align: left;
+    padding-top: 10px;
+}
+
+.info h1 {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.info h6 {
+    margin-bottom: 10px;
+}
+
+.tablaTalles {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    text-align: center;
+    margin-top: 20px;
+    width: 100%;
+}
+
+.tablaTalles p {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    padding: 20px;
+}
+
+.talle {
+    padding: 10px;
+    border: 1px solid #808080;
+    cursor: pointer;
+}
+
+.talle:hover{
+    background-color: #808080;
+    color: #ffffff !important;
+}
+
+.contenedorTabla {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    width: 100%;
+}
+
+.tabla {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    font-weight: bold;
+    padding: 10px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.agregarCarrito2 {
+    margin-top: 30px;
+    align-self: center;
+    border: none;
+    background-color: #c0c0c0;
+    opacity: 80%;
+    font-size: 14px;
+    padding: 20px;
+    border-radius: 12px;
+    cursor: pointer;
+    width: 100%;
+    max-width: 500px;
+}
+
+.agregarCarrito2:hover{
+    background-color: #808080;
+    color: #ffffff;
+    opacity: 80%;
+}
+
+.accordion{
+    margin-top: 30px;
+}
+
+.accordion-button:focus {
+    box-shadow: none !important;
+    outline: none !important;
+}
+
+.accordion-button:not(.collapsed) {
+    background-color: transparent !important;
+}
+
+.recomendaciones{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.recomendacionesContenedor{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    padding: 10px;
+    flex-wrap: wrap;
+}
+
+
+.cardRecomendaciones{
+    flex: 1;
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center;
+    width: 100%;
+    height: auto;
+}
+
+.cardRecomendaciones img {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
 }
 
 /***********************************************************************Footer********************************************************************/
 
 .footer {
     width: 100%;
-    background-color: whitesmoke;
+    background-color: #f5f5f5;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: auto auto auto auto;
@@ -495,8 +653,8 @@ input {
 }
 
 .registro input:hover {
-    background-color: gray;
-    color: white;
+    background-color: #808080;
+    color: #ffffff;
     opacity: 80%;
 }
 
@@ -568,9 +726,9 @@ input {
 }
 
 .infoSucursales input:hover {
-    background-color: gray;
+    background-color: #808080;
     opacity: 80%;
-    color: white;
+    color: #ffffff;
 }
 
 .botonMapa {
@@ -593,62 +751,4 @@ input {
 .footer h3 {
     font-size: 20px;
     font-weight: bold;
-}
-
-/*********************************************************************Media***********************************************************************/
-
-@media screen and (max-width: 800px) {
-
-    /*header*/
-    .logoHeader {
-        width: 70px;
-        background-color: transparent;
-        padding: 3;
-    }
-
-    .contenedorSuperior {
-        display: flex;
-        flex-wrap: wrap;
-        width: 100%;
-        height: 100%;
-    }
-
-    .contenedorDerecho {
-        display: none;
-    }
-
-    .buscar input {
-        display: none;
-        visibility: hidden;
-    }
-
-    .buscar {
-        display: block;
-        align-items: center;
-        padding: 5px 15px;
-        border-radius: 5px;
-        background-color: transparent;
-    }
-
-    /*header*/
-
-    .carouselContenedor {
-        height: 200;
-    }
-
-    .carousel-control-next-icon {
-        width: 100%;
-        height: 400px;
-    }
-
-
-
-
-    .footer {
-        flex-direction: column;
-        text-align: center;
-        align-items: center;
-    }
-
-
 }
