@@ -1,0 +1,88 @@
+.dropdown-menu {
+    width: 300px;
+    background-color: $colorBlanco;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px $colorNegro;
+}
+
+.botonFiltros {
+    @include flexBasico(flex, center, flex-end);
+    width: auto;
+    max-width: 200px;
+    padding: 20px;
+}
+
+.btn-group {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.toggle {
+    display: none;
+}
+
+.dropdown-toggle::after {
+    display: none !important;
+}
+
+.boxFiltro {
+    padding: 10px;
+}
+
+.tituloFiltros {
+    @include flexBasico(flex, space-between, center);
+    font-size: 14px;
+    cursor: pointer;
+    padding: 10px;
+    border-bottom: 1px solid nth($colorGris,2);
+}
+
+.icono {
+    transition: transform 0.3s ease;
+}
+
+.categoriasFiltros {
+    padding: 0 !important;
+    margin: 0;
+
+    ol {
+        text-align: left;
+        margin-top: 10px;
+        padding-left: 15px;
+    }
+
+    li {
+        padding: 5px 0;
+        font-size: 14px;
+        cursor: pointer;
+        transition: color 0.3s ease;
+
+        &:hover {
+            color: nth($colorGris, 1);
+            opacity: 80%;
+        }
+    }
+}
+
+.toggle:checked+.tituloFiltros+.categoriasFiltros {
+    display: block;
+}
+
+.toggle:checked+.tituloFiltros .icono {
+    transform: rotate(45deg);
+}
+
+
+.accordion {
+    margin-top: 30px;
+}
+
+.accordion-button:focus {
+    box-shadow: none !important;
+    outline: none !important;
+}
+
+.accordion-button:not(.collapsed) {
+    background-color: transparent !important;
+}

@@ -1,0 +1,34 @@
+.agregarCarrito {
+    border: none;
+    text-decoration: none;
+    background-color: nth($colorGris, 1);
+    opacity: 80%;
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: $colorBlanco;
+    font-size: 14px;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.agregarCarrito2 {
+    margin-top: 30px;
+    align-self: center;
+    border: none;
+    background-color: nth($colorGris, 2);
+    opacity: 80%;
+    font-size: 14px;
+    padding: 20px;
+    border-radius: 12px;
+    cursor: pointer;
+    width: 100%;
+    max-width: 500px;
+
+    &:hover {
+        background-color: nth($colorGris, 1);
+        color: $colorBlanco;
+        opacity: 80%;
+    }
+}

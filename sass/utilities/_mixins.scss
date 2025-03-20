@@ -1,0 +1,10 @@
+@mixin flexBasico ($display, $justifyValor, $alignItems) {
+    display: $display;
+    justify-content: $justifyContent;
+    align-items: $alignItems;
+}
+
+@mixin tamanios($width, $heigh){
+    width: $widht;
+    height: $heigh;
+}

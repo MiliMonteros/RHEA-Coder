@@ -1,0 +1,100 @@
+.logoHeader {
+    width: 140px;
+    background-color: transparent;
+    margin: 3px;
+    padding: 3px;
+}
+
+.contenedorSuperior {
+    @include flexBasico(flex, space-between, center);
+    @include tamanios (100%, 100px);
+    background-color: $colorBlanco;
+    padding: 20px;
+}
+
+.contenedorDerecho {
+    @include flexBasico(flex, center, center);
+    padding: 15px;
+
+    ul {
+        display: flex;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        gap: 20px;
+    }
+
+    a {
+        padding: 15px;
+        transition: background-color 0.3s ease, color 0.3s ease;
+        text-decoration: none;
+        color: $colorNegro;
+        border-radius: 5px;
+
+        &:hover {
+            background-color: nth($colorGris, 1);
+            opacity: 80%;
+            color: $colorBlanco;
+        }
+    }
+
+    li {
+        padding: 15px;
+        gap: 10px;
+    }
+}
+
+.itemNavBar {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    gap: 20px;
+}
+
+.contenedorIzquierdo {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    background-color: transparent;
+
+    div {
+        @include flexBasico(flex, center, center);
+        padding: 10px;
+        border-radius: 5px;
+        transition: background-color 0.3s ease, color 0.3s ease;
+
+        &:hover {
+            background-color: nth($colorGris, 1);
+
+            i {
+                color: $colorBlanco;
+            }
+
+        }
+    }
+}
+
+.buscar {
+    display: flex;
+    align-items: center;
+    background-color: nth($colorGris, 2);
+    padding: 5px 15px;
+    border-radius: 5px;
+
+    input {
+        border: none;
+        background: transparent;
+        outline: none;
+    }
+
+    &:hover {
+        background-color: nth($colorGris, 1);
+        color: $colorBlanco;
+        opacity: 80%;
+
+        input {
+            color: $colorBlanco;
+        }
+    }
+}

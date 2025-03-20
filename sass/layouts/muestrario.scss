@@ -1,0 +1,44 @@
+.contenedorGridProductos {
+    display: grid;
+    grid-template-columns: 180px 1fr 1fr;
+    gap: 20px;
+    padding: 20px;
+    align-items: start;
+}
+
+.slideFotos {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    img {
+        @include tamanios(150px, auto);
+        cursor: pointer;
+        margin-left: 20px;
+    }
+}
+
+.imagenProducto {
+    @include tamanios(620px,auto);
+    align-self: center;
+}
+
+.contenedorInfo {
+    @include flexBasico(flex, start, start);
+    flex-direction: column;
+    text-align: left;
+}
+
+.info {
+    text-align: left;
+    padding-top: 10px;
+
+    h1 {
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+
+    h6 {
+        margin-bottom: 10px;
+    }
+}

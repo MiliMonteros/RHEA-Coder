@@ -1,0 +1,123 @@
+.footer {
+    width: 100%;
+    background-color: $colorSmoke;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto auto auto auto;
+    grid-gap: 10px;
+    padding: 20px;
+    text-align: center;
+    border: none;
+    box-shadow: none;
+}
+
+.registro {
+    grid-column: span 3;
+    padding: 20px;
+
+    input {
+        margin-top: 10px;
+
+        &:hover {
+            background-color: nth($colorGris, 1);
+            color: $colorBlanco;
+            opacity: 80%;
+        }
+    }
+}
+
+.email {
+    background-color: nth($colorGris, 1);
+    padding: 12px;
+    border-radius: 5px;
+    align-items: center;
+}
+
+.botonSus {
+    background-color: nth($colorGris, 1);
+    padding: 12px;
+    border-radius: 5px;
+    align-items: center;
+    font-weight: 500;
+}
+
+.sobreNosotros {
+    grid-column: 1;
+    grid-row: 2 / 4;
+    padding: 20px;
+    text-align: left;
+
+    ul li {
+        margin-top: 10px;
+    }
+}
+
+.infoAyuda {
+    grid-column: 2;
+    grid-row: 2 / 4;
+    padding: 20px;
+    text-align: left;
+
+    ul li {
+        margin-top: 10px;
+    }
+}
+
+.infoContacto {
+    grid-column: 3;
+    grid-row: 2;
+    padding: 20px;
+}
+
+.redes a {
+    display: inline-block;
+    @include tamanios(50px, 50px);
+    line-height: 50px;
+    color: $colorNegro;
+    transition: all 300ms ease;
+
+    &:hover {
+        color: nth($colorGris, 1);
+    }
+}
+
+.infoSucursales {
+    grid-column: 3;
+    grid-row: 3;
+    padding: 20px;
+    text-align: center;
+
+    div {
+        margin-top: 10px;
+    }
+
+    input {
+        &:hover {
+            background-color: nth($colorGris, 1);
+            opacity: 80%;
+            color: $colorNegro
+        }
+    }
+}
+
+.botonMapa {
+    background-color: nth($colorGris, 1);
+    padding: 12px;
+    border-radius: 5px;
+    align-items: center;
+}
+
+.derechos {
+    grid-column: span 3;
+    text-align: center;
+    padding: 20px;
+
+    small {
+        font-size: 15px;
+    }
+}
+
+.footer h3 {
+    font-size: 20px;
+    font-weight: bold;
+}

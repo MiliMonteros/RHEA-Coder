@@ -1,0 +1,44 @@
+@use "./variables";
+@use "./mixins;";
+
+//Estilos generales//
+
+* {
+    font-family: "Poppins", serif;
+    box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+ul,
+li {
+    margin: 0;
+    padding: 0;
+    color: $colorNegro;
+    text-decoration: none;
+}
+
+ul,
+li {
+    list-style: none;
+    color: $colorNegro;
+}
+
+i {
+    background-color: transparent !important;
+    padding: 5px;
+}
+
+input {
+    border: none;
+    background: transparent;
+    outline: none
+}
+
+

@@ -1,0 +1,23 @@
+.pagination {
+    @include flexBasico(flex, center, center);
+    margin: 20px auto;
+
+    a {
+        color: $colorNegro !important;
+        padding: 8px 12px;
+        text-decoration: none;
+        margin: 0 4px;
+
+        &:hover {
+            background-color: $colorNegro;
+            color: $colorBlanco !important;
+        }
+    }
+
+    span {
+        color: $colorNegro !important;
+        padding: 8px 12px;
+        text-decoration: none;
+        margin: 0 4px;
+    }
+}

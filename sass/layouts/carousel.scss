@@ -1,0 +1,22 @@
+.carouselContenedor {
+    @include tamanios(100%, 800px);
+    overflow: hidden;
+}
+
+///
+.carouselContenedor2 {
+    @include tamanios(100%, 400px);
+    overflow: hidden;
+}
+
+.carousel-item img {
+    align-items: center;
+}
+
+.carousel-control-prev-icon {
+    @include tamanios(o, 0);
+}
+
+.carousel-control-next-icon {
+    @include tamanios (0,0);
+}
