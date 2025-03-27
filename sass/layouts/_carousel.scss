@@ -1,3 +1,6 @@
+@use "../utilities/mixins" as *;
+@use "../utilities/variables" as*;
+
 .carouselContenedor {
     @include tamanios(100%, 800px);
     overflow: hidden;
@@ -14,7 +17,7 @@
 }
 
 .carousel-control-prev-icon {
-    @include tamanios(o, 0);
+    @include tamanios(0, 0);
 }
 
 .carousel-control-next-icon {

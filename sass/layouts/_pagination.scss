@@ -1,3 +1,6 @@
+@use "../utilities/mixins" as *;
+@use "../utilities/variables" as*;
+
 .pagination {
     @include flexBasico(flex, center, center);
     margin: 20px auto;

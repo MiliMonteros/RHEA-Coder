@@ -1,3 +1,6 @@
+@use "../utilities/mixins" as *;
+@use "../utilities/variables" as*;
+
 .footer {
     width: 100%;
     background-color: $colorSmoke;
@@ -95,7 +98,7 @@
         &:hover {
             background-color: nth($colorGris, 1);
             opacity: 80%;
-            color: $colorNegro
+            color: $colorBlanco
         }
     }
 }

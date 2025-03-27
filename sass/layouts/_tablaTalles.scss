@@ -1,3 +1,6 @@
+@use "../utilities/mixins" as *;
+@use "../utilities/variables" as*;
+
 .tablaTalles {
     display: grid;
     grid-template-columns: repeat(3, 1fr);

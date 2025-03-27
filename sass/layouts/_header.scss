@@ -1,3 +1,6 @@
+@use "../utilities/mixins" as *;
+@use "../utilities/variables" as*;
+
 .logoHeader {
     width: 140px;
     background-color: transparent;
@@ -8,7 +11,7 @@
 .contenedorSuperior {
     @include flexBasico(flex, space-between, center);
     @include tamanios (100%, 100px);
-    background-color: $colorBlanco;
+    background-color: $colorSmoke;
     padding: 20px;
 }
 

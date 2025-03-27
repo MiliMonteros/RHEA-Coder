@@ -1,5 +1,15 @@
-@use "./variables";
-@use "./mixins;";
+@use"./utilities/variables" as *;
+@use "./utilities/mixins";
+@use "./layouts/header.scss";
+@use "./layouts/carousel.scss";
+@use "./layouts/contenedores.scss";
+@use "./layouts/addShop.scss";
+@use "./layouts/dropdownMenu.scss";
+@use "./layouts/muestrario.scss";
+@use "./layouts/tablaTalles.scss";
+@use "./layouts/pagination.scss";
+@use "./layouts/footer.scss";
+@use "./layouts/animaciones";
 
 //Estilos generales//
 

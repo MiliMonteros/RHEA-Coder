@@ -1,3 +1,6 @@
+@use "../utilities/mixins" as *;
+@use "../utilities/variables" as*;
+
 .agregarCarrito {
     border: none;
     text-decoration: none;

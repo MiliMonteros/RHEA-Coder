@@ -1,0 +1,31 @@
+@use "../utilities/mixins" as *;
+@use "../utilities/variables" as*;
+
+.contenedorTexto {
+    padding: 10px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: linear-gradient(45deg, #657780, #c0c0c0, #657780);
+    background-size: 300% 300%;
+    animation: animacionFlameo 6s ease infinite;
+}
+
+@keyframes animacionFlameo {
+    0% {
+        background-position: 0% 50%;
+    }
+    25% {
+        background-position: 100% 50%;
+    }
+    50% {
+        background-position: 50% 100%;
+    }
+    75% {
+        background-position: 100% 0%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
