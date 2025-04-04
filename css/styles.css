@@ -95,6 +95,62 @@
   color: #ffffff;
 }
 
+@media (max-width: 400px) {
+  .contenedorSuperior {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+  .navbar-brand {
+    display: flex;
+    align-items: center;
+  }
+  .contenedorIzquierdo {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .buscar {
+    position: relative;
+    display: flex;
+    align-items: center;
+    border: 1px solid transparent;
+    transition: border 0.3s ease;
+  }
+  .buscar input {
+    width: 0;
+    padding: 0;
+    border: none;
+    background: transparent;
+    transition: width 0.3s ease, padding 0.3s ease, opacity 0.3s ease;
+    outline: none;
+    opacity: 0;
+  }
+  .buscar input:focus {
+    width: 150px;
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    background: #ffffff;
+    opacity: 1;
+  }
+  .buscar input:focus ::placeholder {
+    color: #aaa;
+  }
+  .buscar input ::placeholder {
+    color: transparent;
+  }
+  .buscar i {
+    cursor: pointer;
+    font-size: 18px;
+    position: absolute;
+    right: 10px;
+    transition: color 0.3s ease;
+  }
+}
 .carouselContenedor {
   width: 100%;
   height: 800px;
@@ -237,6 +293,7 @@
 
 .contenedorPromos {
   width: 100%;
+  height: auto;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 10px;
@@ -645,31 +702,48 @@
   font-weight: bold;
 }
 
+@media (max-width: 400px) {
+  .footer {
+    display: flex;
+    flex-direction: column 1fr;
+    align-items: center;
+    text-align: center;
+  }
+  .footer > div {
+    width: 100%;
+    padding: 10px;
+  }
+  .registro input,
+  .botonMapa {
+    width: 90%;
+  }
+}
 .contenedorTexto {
   padding: 10px;
   height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background: linear-gradient(45g, #657780, #c0c0c0, #657780);
-  animation: animacionFlameo 10s ease infinite;
+  background: linear-gradient(45deg, #657780, #c0c0c0, #657780);
+  background-size: 300% 300%;
+  animation: animacionFlameo 6s ease infinite;
 }
 
 @keyframes animacionFlameo {
   0% {
-    background-position: 0% 40%;
+    background-position: 0% 50%;
   }
   25% {
-    background-position: 100% 60%;
-  }
-  50% {
-    background-position: 0% 70%;
-  }
-  75% {
     background-position: 100% 50%;
   }
+  50% {
+    background-position: 50% 100%;
+  }
+  75% {
+    background-position: 100% 0%;
+  }
   100% {
-    background-position: 0% 40%;
+    background-position: 0% 50%;
   }
 }
 * {

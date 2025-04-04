@@ -124,3 +124,22 @@
     font-size: 20px;
     font-weight: bold;
 }
+
+@media (max-width: 400px) {
+    .footer {
+        display: flex;
+        flex-direction: column (1fr);
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer>div {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .registro input,
+    .botonMapa {
+        width: 90%;
+    }
+}

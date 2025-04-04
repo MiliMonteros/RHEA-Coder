@@ -1,12 +1,14 @@
 @use "../utilities/mixins" as *;
 @use "../utilities/variables" as*;
 
+
 .logoHeader {
     width: 140px;
     background-color: transparent;
     margin: 3px;
     padding: 3px;
 }
+
 
 .contenedorSuperior {
     @include flexBasico(flex, space-between, center);
@@ -98,6 +100,72 @@
 
         input {
             color: $colorBlanco;
+        }
+    }
+}
+
+@media (max-width: 400px) {
+    .contenedorSuperior {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+    }
+
+    .navbar-brand {
+        display: flex;
+        align-items: center;
+    }
+
+    .contenedorIzquierdo {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .buscar {
+        position: relative;
+        display: flex;
+        align-items: center;
+        border: 1px solid transparent;
+        transition: border 0.3s ease;
+
+        input {
+            width: 0;
+            padding: 0;
+            border: none;
+            background: transparent;
+            transition: width 0.3s ease, padding 0.3s ease, opacity 0.3s ease;
+            outline: none;
+            opacity: 0;
+
+            &:focus {
+                width: 150px;
+                padding: 5px 10px;
+                border: 1px solid #ccc;
+                background: $colorBlanco;
+                opacity: 1;
+
+                ::placeholder {
+                    color: #aaa;
+                }
+            }
+
+            ::placeholder {
+                color: transparent;
+            }
+
+        }
+
+        i {
+            cursor: pointer;
+            font-size: 18px;
+            position: absolute;
+            right: 10px;
+            transition: color 0.3s ease;
         }
     }
 }
