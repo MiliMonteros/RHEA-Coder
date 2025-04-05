@@ -26,7 +26,7 @@
 }
 
 .dropdown-toggle::after {
-    display: none !important;
+    display: none;
 }
 
 .boxFiltro {
@@ -46,7 +46,7 @@
 }
 
 .categoriasFiltros {
-    padding: 0 !important;
+    padding: 0;
     margin: 0;
 
     ol {
@@ -81,11 +81,11 @@
     margin-top: 30px;
 }
 
-.accordion-button:focus {
-    box-shadow: none !important;
-    outline: none !important;
+.acordion-header .accordion-button:focus {
+    box-shadow: none;
+    outline: none;
 }
 
 .accordion-button:not(.collapsed) {
-    background-color: transparent !important;
+    background-color: transparent;
 }

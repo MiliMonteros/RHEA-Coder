@@ -125,21 +125,60 @@
     font-weight: bold;
 }
 
-@media (max-width: 400px) {
+@media (max-width: 800px) {
     .footer {
-        display: flex;
-        flex-direction: column (1fr);
-        align-items: center;
-        text-align: center;
+      grid-template-columns: 2fr;
     }
-
-    .footer>div {
-        width: 100%;
-        padding: 10px;
+  
+    .registro,
+    .sobreNosotros,
+    .infoAyuda,
+    .infoContacto,
+    .infoSucursales,
+    .derechos {
+      grid-column: 1;
+      grid-row: auto;
+      text-align: center;
     }
-
-    .registro input,
+  
+    .sobreNosotros,
+    .infoAyuda {
+      text-align: center;
+    }
+  
+    .email,
+    .botonSus,
     .botonMapa {
-        width: 90%;
+      width: 100%;
+      box-sizing: border-box;
     }
-}
+  }
+
+  @media (max-width: 400px) {
+    .footer {
+      grid-template-columns: 1fr;
+    }
+  
+    .registro,
+    .sobreNosotros,
+    .infoAyuda,
+    .infoContacto,
+    .infoSucursales,
+    .derechos {
+      grid-column: 1;
+      grid-row: auto;
+      text-align: center;
+    }
+  
+    .sobreNosotros,
+    .infoAyuda {
+      text-align: center;
+    }
+  
+    .email,
+    .botonSus,
+    .botonMapa {
+      width: 100%;
+      box-sizing: border-box;
+    }
+  }

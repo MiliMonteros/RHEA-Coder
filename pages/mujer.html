@@ -23,42 +23,52 @@
 </head>
 
 <body>
-    <header>
-
-        <div class="contenedorSuperior">
-            <a href="../index.html">
-                <img class="logoHeader" src="../img2/logo.png" alt="Logo RHEA">
-            </a>
-
-            <nav class="contenedorDerecho">
-                <ul class="itemNavBar">
-                    <li><a href="../index.html">INICIO</a></h3>
-                    </li>
-                    <li><a href="#">MUJER</a></h3>
-                    </li>
-                    <li><a href="./hombre.html">HOMBRE</a></h3>
-                    </li>
-                    <li><a href="./accesorios.html">ACCESORIOS</a></h3>
-                    </li>
-                </ul>
-            </nav>
-
-            <div class="contenedorIzquierdo">
-                <div class="buscar">
-                    <input type="text" placeholder="Buscar">
-                    <i class="bi bi-search"></i>
+    <header class="navbar navbar-expand-lg bg-light">
+        <nav class="container-xxl bd-gutter flex-wrap flex-lg-nowrap">
+            <div class="container-fluid">
+                <div class="d-flex align-items-center">
+                    <button class="navbar-toggler me-2" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navContenido">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">
+                        <img class="logoHeader" src="../img2/logo.png" alt="Logo RHEA">
+                    </a>
                 </div>
 
-                <div>
-                    <i class="bi bi-person"></i>
-                </div>
-
-                <div>
-                    <i class="bi bi-bag"></i>
+                <div class="collapse navbar-collapse" id="navContenido">
+                    <ul class="nav me-auto mb-2 mb-lg-0 itemNavBar contenedorDerecho">
+                        <li class="nav-item">
+                            <a class="nav-link" href="../index.html">INICIO</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">MUJER</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./hombre.html">HOMBRE</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./accesorios.html">ACCESORIOS</a>
+                        </li>
+                        <li class="nav-item">
+                            <div class="buscar">
+                                <input type="text" placeholder="Buscar">
+                                <i class="bi bi-search"></i>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <i class="bi bi-person"></i>
+                        </li>
+                        <li class="nav-item">
+                            <i class="bi bi-bag"></i>
+                        </li>
+                    </ul>
                 </div>
             </div>
-        </div>
+        </nav>
+    </header>
 
+    <main>
         <div id="carouselExample" class="carousel slide carouselContenedor2">
             <div class="carousel-inner">
                 <div class="carousel-item active">
@@ -81,9 +91,6 @@
             </button>
         </div>
 
-    </header>
-
-    <main>
         <div class="contenedorPromos">
             <div class="contenedorTexto">
                 <div class="textoPromo">

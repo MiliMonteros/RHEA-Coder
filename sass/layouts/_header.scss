@@ -5,10 +5,8 @@
 .logoHeader {
     width: 140px;
     background-color: transparent;
-    margin: 3px;
-    padding: 3px;
+    padding: 16px;
 }
-
 
 .contenedorSuperior {
     @include flexBasico(flex, space-between, center);
@@ -55,6 +53,21 @@
     margin: 0;
     padding: 0;
     gap: 20px;
+}
+
+.nav-item {
+    align-items: end;
+
+    li {
+        &:hover {
+            background-color: nth($colorGris, 1);
+
+            i {
+                color: $colorBlanco;
+            }
+
+        }
+    }
 }
 
 .contenedorIzquierdo {

@@ -1,8 +1,7 @@
 .logoHeader {
   width: 140px;
   background-color: transparent;
-  margin: 3px;
-  padding: 3px;
+  padding: 16px;
 }
 
 .contenedorSuperior {
@@ -51,6 +50,16 @@
   margin: 0;
   padding: 0;
   gap: 20px;
+}
+
+.nav-item {
+  align-items: end;
+}
+.nav-item li:hover {
+  background-color: #808080;
+}
+.nav-item li:hover i {
+  color: #ffffff;
 }
 
 .contenedorIzquierdo {
@@ -291,6 +300,30 @@
   font-size: 16px;
 }
 
+@media (max-width: 1000px) {
+  .contenedorGaleria {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .contenedorProductos {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 800px) {
+  .contenedorGaleria {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .contenedorProductos {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 400px) {
+  .contenedorGaleria {
+    grid-template-columns: 1fr;
+  }
+  .contenedorProductos {
+    grid-template-columns: 1fr;
+  }
+}
 .contenedorPromos {
   width: 100%;
   height: auto;
@@ -322,6 +355,34 @@
   object-fit: cover;
 }
 
+@media (max-width: 1000px) {
+  .contenedorPromos {
+    grid-template-columns: 2fr;
+    padding: 20px;
+  }
+  .contenedorImgPromo {
+    align-items: center;
+  }
+  .contenedorImgPromo img {
+    width: 100%;
+    height: auto;
+    max-width: 300px;
+  }
+}
+@media (max-width: 400px) {
+  .contenedorPromos {
+    grid-template-columns: 1fr;
+    padding: 20px;
+  }
+  .contenedorImgPromo {
+    align-items: center;
+  }
+  .contenedorImgPromo img {
+    width: 100%;
+    height: auto;
+    max-width: 300px;
+  }
+}
 .recomendaciones {
   display: flex;
   flex-direction: column;
@@ -414,7 +475,7 @@
 }
 
 .dropdown-toggle::after {
-  display: none !important;
+  display: none;
 }
 
 .boxFiltro {
@@ -436,7 +497,7 @@
 }
 
 .categoriasFiltros {
-  padding: 0 !important;
+  padding: 0;
   margin: 0;
 }
 .categoriasFiltros ol {
@@ -467,13 +528,13 @@
   margin-top: 30px;
 }
 
-.accordion-button:focus {
-  box-shadow: none !important;
-  outline: none !important;
+.acordion-header .accordion-button:focus {
+  box-shadow: none;
+  outline: none;
 }
 
 .accordion-button:not(.collapsed) {
-  background-color: transparent !important;
+  background-color: transparent;
 }
 
 .contenedorGridProductos {
@@ -522,6 +583,11 @@
   margin-bottom: 10px;
 }
 
+@media (max-width: 400px) {
+  .contenedorGridProductos {
+    display: inline;
+  }
+}
 .tablaTalles {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -544,7 +610,7 @@
 }
 .talle:hover {
   background-color: #808080;
-  color: #ffffff !important;
+  color: #ffffff;
 }
 
 .contenedorTabla {
@@ -571,17 +637,17 @@
   margin: 20px auto;
 }
 .pagination a {
-  color: #000000 !important;
+  color: #000000;
   padding: 8px 12px;
   text-decoration: none;
   margin: 0 4px;
 }
 .pagination a:hover {
-  background-color: #000000;
-  color: #ffffff !important;
+  background-color: #808080;
+  color: #ffffff;
 }
 .pagination span {
-  color: #000000 !important;
+  color: #000000;
   padding: 8px 12px;
   text-decoration: none;
   margin: 0 4px;
@@ -702,20 +768,54 @@
   font-weight: bold;
 }
 
-@media (max-width: 400px) {
+@media (max-width: 800px) {
   .footer {
-    display: flex;
-    flex-direction: column 1fr;
-    align-items: center;
+    grid-template-columns: 2fr;
+  }
+  .registro,
+  .sobreNosotros,
+  .infoAyuda,
+  .infoContacto,
+  .infoSucursales,
+  .derechos {
+    grid-column: 1;
+    grid-row: auto;
     text-align: center;
   }
-  .footer > div {
-    width: 100%;
-    padding: 10px;
+  .sobreNosotros,
+  .infoAyuda {
+    text-align: center;
   }
-  .registro input,
+  .email,
+  .botonSus,
   .botonMapa {
-    width: 90%;
+    width: 100%;
+    box-sizing: border-box;
+  }
+}
+@media (max-width: 400px) {
+  .footer {
+    grid-template-columns: 1fr;
+  }
+  .registro,
+  .sobreNosotros,
+  .infoAyuda,
+  .infoContacto,
+  .infoSucursales,
+  .derechos {
+    grid-column: 1;
+    grid-row: auto;
+    text-align: center;
+  }
+  .sobreNosotros,
+  .infoAyuda {
+    text-align: center;
+  }
+  .email,
+  .botonSus,
+  .botonMapa {
+    width: 100%;
+    box-sizing: border-box;
   }
 }
 .contenedorTexto {
@@ -774,7 +874,7 @@ li {
 }
 
 i {
-  background-color: transparent !important;
+  background-color: transparent;
   padding: 5px;
 }
 

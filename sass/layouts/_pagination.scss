@@ -6,19 +6,19 @@
     margin: 20px auto;
 
     a {
-        color: $colorNegro !important;
+        color: $colorNegro;
         padding: 8px 12px;
         text-decoration: none;
         margin: 0 4px;
 
         &:hover {
-            background-color: $colorNegro;
-            color: $colorBlanco !important;
+            background-color: nth($colorGris, 1);
+            color: $colorBlanco;
         }
     }
 
     span {
-        color: $colorNegro !important;
+        color: $colorNegro;
         padding: 8px 12px;
         text-decoration: none;
         margin: 0 4px;
