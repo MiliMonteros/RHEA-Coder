@@ -119,9 +119,7 @@
 
 @media (max-width: 400px) {
     .contenedorSuperior {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+        @include flexBasico (flex, space-between, center);
         width: 100%;
     }
 

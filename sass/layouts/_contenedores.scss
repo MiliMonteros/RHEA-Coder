@@ -171,6 +171,7 @@
     }
 }
 
+///
 @media (max-width: 1000px) {
     .contenedorPromos {
         grid-template-columns: 2fr;
@@ -182,8 +183,7 @@
     }
 
     .contenedorImgPromo img {
-        width: 100%;
-        height: auto;
+        @include tamanios (100%, auto);
         max-width: 300px;
     }
 }
@@ -199,8 +199,7 @@
     }
 
     .contenedorImgPromo img {
-        width: 100%;
-        height: auto;
+        @include tamanios (100%, auto);
         max-width: 300px;
     }
 }
